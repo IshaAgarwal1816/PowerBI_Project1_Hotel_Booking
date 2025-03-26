@@ -20,6 +20,8 @@ This project involves creating a **hotel booking analytics dashboard** using **P
 - **Loyalty Level Analysis:** Breakdown of guest types (members vs. non-members).  
 - **Booking Channel Analysis:** Evaluating the most effective booking sources (Hotel App, Website, Wholesalers, GDS, Phone, etc.).  
 
+![Dashboard Preview](https://github.com/IshaAgarwal1816/PowerBI_Project1_Hotel_Booking/blob/main/Dashboard.png?raw=true)
+
 ## ⚡ DAX Calculations Used  
 Several **DAX (Data Analysis Expressions) calculations** were implemented to derive meaningful insights from the dataset. Below are the key measures:  
 
