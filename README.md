@@ -25,39 +25,51 @@ This project involves creating a **hotel booking analytics dashboard** using **P
 ## ⚡ DAX Calculations Used  
 Several **DAX (Data Analysis Expressions) calculations** were implemented to derive meaningful insights from the dataset. Below are the key measures:  
 
+
+1. **Total Booking Count**
 ```DAX
--- Total Booking Count
 Booking Count = COUNT(bookings[Booking ID])
-
---  Cancellation Count
-Cancellation Count = CALCULATE([Booking Count], bookings[Status] = "Cancelled")
-
--- Cancellation Percentage
-Cancellation Pct = (SUM(bookings[Cancellation Count]) / SUM(bookings[Booking Count])) * 100
-
--- Total Revenue
-Total Revenue = SUM(bookings[Revenue])
-
--- Total Room Nights
-Total Room Nights = SUM(bookings[Number of nights])
-
--- Average Room Rate
-Avg. Room Rate = DIVIDE(SUM(bookings[Room Rate]), SUM(bookings[Booking Count]))
-
--- Loyal Customer Booking Count
-Loyal Customer Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Loyalty Level] <> "Non-member")
-
--- Not Loyal Customer Booking Count
-Not Loyal Customer Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Loyalty Level] = "Non-member")
-
--- Multi-Night Booking Count
-Multi-Night Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Number of nights] > 1)
-
--- Single Night Booking Count
-Single Night Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Number of nights] = 1)
-
 ```
 
+
+2. **Cancellation Count**
+```DAX
+Cancellation Count = CALCULATE([Booking Count], bookings[Status] = "Cancelled") 
+   ```
+3. **Cancellation Percentage**
+```DAX
+Cancellation Pct = (SUM(bookings[Cancellation Count]) / SUM(bookings[Booking Count])) * 100 
+   ```
+4. **Total Revenue**
+```DAX
+Total Revenue = SUM(bookings[Revenue])  
+   ```   
+5. **Total Room Nights**
+```DAX
+Total Room Nights = SUM(bookings[Number of nights])   
+   ```
+6. **Average Room Rate**
+```DAX
+Avg. Room Rate = DIVIDE(SUM(bookings[Room Rate]), SUM(bookings[Booking Count]))   
+   ```
+7. **Loyal Customer Booking Count**
+```DAX
+Loyal Customer Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Loyalty Level] <> "Non-member")   
+   ```
+8. **Not Loyal Customer Booking Count**
+```DAX
+Not Loyal Customer Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Loyalty Level] = "Non-member")   
+   ```
+9. **Multi-Night Booking Count**
+```DAX
+Multi-Night Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Number of nights] > 1)   
+   ```
+10. **Single Night Booking Count**
+```DAX
+Single Night Booking Count = CALCULATE(COUNT(bookings[Booking ID]), bookings[Number of nights] = 1)   
+   ```
+
+    
 ## 📊 Outcome & Learnings  
 
 ✅ **Actionable Insights for Hotel Managers**  
